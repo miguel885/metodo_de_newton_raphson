@@ -1,0 +1,19 @@
+diferencas-finitas
+
+import numpy as np
+
+def forward_difference(f, x, h=1e-5):
+    return (f(x + h) - f(x)) / h
+
+def backward_difference(f, x, h=1e-5):
+    return (f(x) - f(x - h)) / h
+
+def central_difference(f, x, h=1e-5):
+    return (f(x + h) - f(x - h)) / (2 * h)
+
+# Exemplo de uso:
+# def func(x): return x**2
+# x_val = 2.0
+# print(forward_difference(func, x_val))
+# print(backward_difference(func, x_val))
+# print(central_difference(func, x_val))
